@@ -9,13 +9,37 @@ tmux,screen / zsh / vim / git 환경 설정 프로젝트.
 - vim 7.x
 - git
 
+#tmux 설치
+
+    wget https://github.com/downloads/libevent/libevent/libevent-2.0.21-stable.tar.gz
+    tar xvzf libevent-2.0.21-stable.tar.gz
+    cd libevent-2.0.21-stable
+    ./configure
+    make
+    make install
+    cd ..
+    git clone https://github.com/tmux/tmux.git
+    cd tmux
+    ./autogen.sh
+    ./configure
+    make
+    make install
+
+#vim 설치
+
+    git clone https://github.com/vim/vim.git
+    cd vim
+    ./configure --with-features=huge --disable-gui --without-x --enable-rubyinterp --enable-cscope --enable-multibyte --enable-hangulinput
+    make
+    make install
+
 #설치하기
 
     mkdir <your ID>
     cd <your ID>
-    git clone https://github.com/newro/develconfig.git
-    develconfig/install.sh
-
+    git clone https://github.com/yoonpro/develconfig.git
+    cd develconfig
+    ./install.sh
 
 #디렉토리 구조
 
