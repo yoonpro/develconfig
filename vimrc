@@ -512,5 +512,5 @@ if filereadable($LOCAL_VIMRC)
     source $LOCAL_VIMRC
 endif
 
-execute pathogen#infect()
-filetype plugin indent on
+"= execute pathogen#infect()
+"= filetype plugin indent on
