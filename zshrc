@@ -123,7 +123,6 @@ alias history='history -i -1000'
 alias slog='slog'
 alias cpanplus='perl -MCPAN -eshell'
 alias ctail='noglob mytail'
-alias cscope="cd ~/xcat;ctags --sort=foldcase --regex-perl='/^[ \t]*method[ \t]+([^\ \t;\(]+)/\1/m,method,methods/' -R ~/xcat;cd -"
 
 # Bind
 #
@@ -135,17 +134,12 @@ fi
 
 # export
 #
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib64:/lib:/usr/lib64:/usr/lib:/usr/local/lib64:/usr/local/lib:/usr/X11R6/lib64:/usr/X11R6/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib64:/lib:/usr/lib64:/usr/lib:/usr/local/lib64:/usr/local/lib
 
 export LEIN_ROOT=1
-export ERLANG=/opt/erlang/bin
-export HEROKU=/usr/local/heroku/bin
 export GIT_SSL_NO_VERIFY=true
 export TERM=xterm-color
 export PS_RIGHT=detail # detail / compact / noinfo
-
-PATH=.:$PATH:/bin:/usr/bin:/usr/local/bin:$HOME:$ERLANG:$CLOJURE:$HEROKU
-export PATH
 
 export SVNEDITOR=vi
 
